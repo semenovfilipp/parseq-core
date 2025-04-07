@@ -44,9 +44,16 @@ npm start
    - Имя образа: `semenovfilipp/parseq-frontend:dev`
    - Порт: `10100`
 
+```yaml
+docker run -d -p 10100:10100 --name parseq-frontend semenovfilipp/parseq-frontend:dev
+```
+
 2. **Докер-образ бэкенда**
    - Имя образа: `semenovfilipp/parseq-backend:dev`
    - Порт: `10300`
+```yaml
+docker run -d -p 10300:10300 --name parseq-backend semenovfilipp/parseq-backend:dev
+```
 
 3. **Связь контейнеров**
    - Оба контейнера связаны в [docker-compose.yml](parseq-compose.yaml)
