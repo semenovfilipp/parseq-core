@@ -10,7 +10,7 @@ DOCKER_TOKEN="your_token"
 echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 echo "Building project..."
-mvn clean package || exit 1
+gradle clean build || exit 1
 
 BUILD_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 BRANCH_NAME_LOWER=$(echo "$BUILD_BRANCH" | tr '[:upper:]' '[:lower:]')
